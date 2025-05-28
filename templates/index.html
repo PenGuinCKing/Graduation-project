@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>火车票查询系统</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+<div class="index">
+    <div class="public_left">
+        <iframe src="{% url 'App:left' %}" width="100%" height="100%"  ></iframe>
+    </div>
+
+    <div class="public_right">
+        <div class="public_header">
+            <iframe name="header" src="{% url 'App:header'  %}" width="100%" height="100%" ></iframe>
+        </div>
+        <div class="public_main">
+            <iframe name="main" src="{% url 'App:main' page=1 %}" width="100%" height="100%" ></iframe>
+        </div>
+    </div>
+
+    <div class="public_foot">
+        <iframe src="{% url 'App:foot' %}" width="100%" height="100%"></iframe>
+    </div>
+</div>
+
+</body>
+</html>

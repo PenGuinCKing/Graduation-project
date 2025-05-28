@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="/static/css/main_user_home.css">
+</head>
+<body>
+<div class="box">
+    <form action="" method="post">
+        {% csrf_token %} {# 防跨站攻击 #}
+        <div class="username">
+            <label>
+                <input name="username" style="height: 30px;font-size: 30px;background-color: #e7e7e7;border: none;outline: none;"  type="text" value="{{ user.username }}">
+            </label>
+        </div>
+        <div class="id">账号id：{{ user.id }}</div>
+        <div class="reg_time">注册时间：{{ user.reg_time }}</div>
+        <div class="sex">
+            <label>
+             性别：<input name="sex" style="height: 20px;font-size: 20px;background-color: #e7e7e7;border: none;outline: none;"  value="{{ user.sex }}">
+            </label>
+        </div>
+        <div class="email">
+            <label>
+            邮箱：<input name="email" style="width: 100%;background-color: #e7e7e7;border: none;outline: none;position: absolute;font-size: 20px" type="email" value="{{ user.email }}">
+            </label>
+        </div>
+        <div class="line1"></div>
+        <div class="name">
+            <label>
+                真实姓名：<input name="name" style="width: 100%;background-color: #e7e7e7;border: none;outline: none;position: absolute;font-size: 20px" type="text" value="{{ user.name }}">
+            </label>
+        </div>
+        <div class="line2"></div>
+        <div class="carid">
+            <label>
+                身份证号：<input name="carid" style="width: 100%;background-color: #e7e7e7;border: none;outline: none;position: absolute;font-size: 20px" type="text" value="{{ user.carid }}">
+            </label>
+        </div>
+        <div class="line3"></div>
+        <div class="money">余额：{{ user.money }}￥</div>
+        <div class="line4"></div>
+        <input class="edit" value="保存个人信息" type="submit">
+        <div class="line5"></div>
+    </form>
+    {% if status %}
+        <div id="tip" class="tip" style="width: 350px;
+    height: 50px;
+    background-color: salmon;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 300px;
+    margin-top: 600px;
+    font-size: 25px">{{ tip }}</div>
+    {% endif %}
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+{#    提示框淡入淡出#}
+    $('#tip').fadeOut(4000);
+
+</script>
+</body>
+</html>

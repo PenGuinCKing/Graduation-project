@@ -1,0 +1,153 @@
+.box{
+    margin: 0 auto;
+    width: 1200px;
+    height: 800px;
+    background-color: darkslategray;
+}
+.log-reg{
+    width: 500px;
+    height: 700px;
+    background-color: #e7e7e7 ;
+    float: left;
+    margin-left: 70px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.username{
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    background-color: #555555;
+    margin-top: 100px;
+    margin-left: 50px;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.username1{
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    background-color: #555555;
+    margin-top: 100px;
+    margin-left: 50px;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.password{
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    background-color: #555555;
+    margin-top: 250px;
+    margin-left: 50px;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.password1{
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    background-color: #555555;
+    margin-top: 180px;
+    margin-left: 50px;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.repassword{
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    background-color: #555555;
+    margin-top: 260px;
+    margin-left: 50px;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.email{
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    background-color: #555555;
+    margin-top: 340px;
+    margin-left: 50px;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+input{
+    position: absolute;
+    margin: 0 auto;
+    outline: none;
+    width: 250px;
+    height: 50px;
+    margin-left: 113px;
+    margin-top: -78px;
+    font-size: 30px;
+    background-color: #e7e7e7;
+    border-radius: 0 20px 20px 0;
+}
+.input1{
+    position: absolute;
+    margin: 0 auto;
+    outline: none;
+    width: 250px;
+    height: 30px;
+    margin-left: 113px;
+    margin-top: -48px;
+    font-size: 18px;
+    background-color: #e7e7e7;
+    border-radius: 0 20px 20px 0;
+}
+.text{
+    line-height: 100px;
+    width: 80px;
+    height: 100px;
+    background-color: darkcyan;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
+.text1{
+    line-height: 60px;
+    width: 80px;
+    height: 60px;
+    background-color: darkcyan;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+}
+.button{
+    margin-top: 450px;
+    margin-left: 135px;
+    background-color: mediumseagreen;
+    color: white;
+    border-radius: 0;
+}
+.top{
+    font-size: 30px;
+    background-color: orange;
+    color: white;
+    width: 300px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border: 2px solid gainsboro;
+    border-radius: 10px;
+    margin-left: 95px;
+    margin-top: -20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.tip{
+    position:absolute;
+    width: 300px;
+    height: 50px;
+    background-color: salmon;
+    margin-top: 500px;
+}

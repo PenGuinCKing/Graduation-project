@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/buy_ticket.css">
+</head>
+<body>
+<div class="box">
+<div class="title">填写订单</div>
+    <form action="" method="post">
+        {% csrf_token %} {# 防跨站攻击 #}
+{#        车次信息#}
+        <div class="train">
+            <div class="title">车次信息</div>
+            <div class="t_name">
+{#                <div>车次</div>#}
+                <div>{{ ticket.t_name }}</div>
+            </div>
+            <div class="start_station">
+{#                <div>始发站</div>#}
+                <div>{{ ticket.start_station }}</div>
+            </div>
+            <div class="end_station">
+{#                <div>终点站</div>#}
+                <div>{{ ticket.end_station }}</div>
+            </div>
+            <div class="start_time">
+                <div id="start_point"></div>
+                <div>{{ ticket.start_time }}</div>
+            </div>
+            <div id="line"></div>
+            <div class="end_time">
+                <div id="end_point"></div>
+                <div>{{ ticket.end_time }}</div>
+            </div>
+            <div class="time">
+                <div>总时长</div>
+                <div id="time">{{ ticket.time }}</div>
+            </div>
+            <div class="c_seat">
+                <div>二等座</div>
+                <div>{{ ticket.c_seat }}张</div>
+            </div>
+            <div class="b_seat">
+                <div>一等座</div>
+                <div>{{ ticket.b_seat }}张</div>
+            </div>
+            <div class="a_seat">
+                <div>商务座</div>
+                <div>{{ ticket.a_seat }}张</div>
+            </div>
+            <div class="seat_type">
+                <label>
+                    选择座位类型<input name="sel" list="seat" >
+                    <datalist id="seat">
+                        <option value="二等座">{{ ticket.c_price }}￥</option>
+                        <option value="一等座">{{ ticket.b_price }}￥</option>
+                        <option value="商务座">{{ ticket.a_price }}￥</option>
+                    </datalist>
+                </label>
+            </div>
+            <div class="go_day">
+                <div>选择出行日期</div>
+                <div>
+                    <label>
+                        <input name="go_day" type="date">
+                    </label>
+                </div>
+            </div>
+            </div>
+{#                旅客信息#}
+            <div class="user">
+            <div class="title">旅客信息</div>
+            <div class="name">
+                <div>输入真实姓名</div>
+                <div>
+                    <label>
+                        <input name="username" value="{{ name }}" type="text">
+                    </label>
+                </div>
+            </div>
+            <div class="carid">
+                <div>输入身份证号</div>
+                <div>
+                    <label>
+                        <input name="u_carid" value="{{ carid }}" type="text">
+                    </label>
+                </div>
+            </div>
+            <input class="button" type="submit" value="购买">
+            {% if status %}
+                <div id="tip">{{ tip }}</div>
+            {% endif %}
+            {% if success %}
+                <div id="stip">{{ tip }}</div>
+            {% endif %}
+        </div>
+    </form>
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+{#    提示框淡入淡出#}
+    $('#tip').fadeOut(4000);
+    $('#stip').fadeOut(4000);
+
+</script>
+</body>
+</html>

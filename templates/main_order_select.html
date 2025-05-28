@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/main_order_select.css">
+</head>
+<script src="/static/js/jQuery.min.js"></script>
+<script src="/static/js/Convert_Pinyin.js"></script>
+<body>
+<div class="box">
+<div class="title"><a href="{% url 'App:main_order_all' page=1 %}">👉{{ tip }}</a></div>
+{% for order in orders %}
+    <div class="order_box">
+    <div class="order"  >
+        <div class="start_station">
+            <div>{{ order.start_station }}<span class="zhan"> 站</span></div>
+            <div id="fullName"></div>
+        </div>
+        <div class="end_station">
+            <div>{{ order.end_station }}<span class="zhan"> 站</span></div>
+        </div>
+        <div class="t_name">
+            <div>{{ order.t_name }}</div>
+            <div class="line"></div>
+            <div class="jiantou"></div>
+        </div>
+        <div class="go_day">{{ order.go_day }}</div>
+        <div class="start_time">{{ order.start_time }}<span>开</span></div>
+        <div class="seat_id">{{ order.seat_id }}</div>
+        <div class="price">￥{{ order.price }}元</div>
+        <div class="wang">网</div>
+        <div  class="seat_type">{{ order.seat_type }}</div>
+        <div class="text">仅供报销使用</div>
+        <div id="carid" class="cid">{{ carid }}</div>
+        <div class="name">{{ name }}</div>
+        <div class="tip">
+            <div>买票请到12309 发货请到95309</div>
+            <div>中国铁路祝您旅途愉快</div>
+        </div>
+        <div class="oid">{{ order.oid }}</div>
+        <div class="start_station1">{{ order.start_station }}售</div>
+        <div class="erweima"></div>
+        <div class="en_s">{{ en_s1 }}</div>
+        <div class="en_e">{{ en_e1 }}</div>
+    </div>
+    </div>
+{% endfor %}
+
+</div>
+<script>
+
+        var seat = document.getElementsByClassName('seat_type')
+        console.log(seat[0].innerHTML)
+        if(seat[0].innerText==='a_seat'){
+            seat[0].innerHTML='商务座'
+        }else if(seat[0].innerText==='b_seat'){
+            seat[0].innerHTML='一等座'
+        }else {seat[0].innerHTML='二等座'}
+        if(seat[1].innerText==='a_seat'){
+            seat[1].innerHTML='商务座'
+        }else if(seat[1].innerText==='b_seat'){
+            seat[1].innerHTML='一等座'
+        }else {seat[1].innerHTML='二等座'}
+
+        {#var cid = document.getElementsByClassName('cid').innerText#}
+        {#id1 = cid.slice(0,10)#}
+        {#id2 = cid.slice(14)#}
+        {#m='****'#}
+        {#document.getElementsByClassName('cid').innerHTML=id1+m+id2#}
+
+
+</script>
+</body>
+</html>

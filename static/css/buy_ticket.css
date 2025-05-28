@@ -1,0 +1,256 @@
+.box{
+    width: 1000px;
+    height: 700px;
+    background-color: darkslategray;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-top: 1px;
+}
+.title{
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: #e7e7e7;
+    background-color: mediumseagreen;
+    position: absolute;
+    margin-left: 400px;
+    border-radius: 10px;
+    margin-top: -15px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.train{
+    width: 600px;
+    height: 300px;
+    background-color: #e7e7e7;
+    margin-top: 90px;
+    margin-left: 200px;
+    transition-duration: 0.4s;
+}
+.train:hover{
+    margin-top: 85px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.train:hover+.user{
+    margin-top: 55px;
+}
+.train .title{
+    margin-left: 200px;
+
+}
+.t_name{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    /*background-color: red;*/
+    margin-left: 80px;
+    margin-top: 120px;
+    font-size: 18px;
+}
+.start_time{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    /*background-color: red;*/
+    margin-left: 150px;
+    margin-top: 70px;
+    font-size: 18px;
+}
+#start_point{
+    width: 20px;
+    height: 20px;
+    background-color: mediumseagreen;
+    position: absolute;
+    margin-left: -25px;
+    margin-top: 3px;
+    border-radius: 10px;
+}
+#end_point{
+    width: 20px;
+    height: 20px;
+    background-color: mediumseagreen;
+    position: absolute;
+    margin-left: -25px;
+    margin-top: 3px;
+    border-radius: 10px;
+}
+#line{
+    position: absolute;
+    width: 4px;
+    height: 74px;
+    background-color: mediumseagreen;
+    margin-top: 96px;
+    margin-left: 133px;
+    border-radius: 4px;
+}
+.end_time{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    /*background-color: red;*/
+    margin-left: 150px;
+    margin-top: 170px;
+    font-size: 18px;
+}
+.time{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    /*background-color: red;*/
+    margin-left: 160px;
+    margin-top: 120px;
+    font-size: 16px;
+}
+.time #time{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    /*background-color: red;*/
+    margin-left: 100px;
+    margin-top: -21px;
+    font-size: 16px;
+}
+.start_station{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    /*background-color: red;*/
+    margin-left: 250px;
+    margin-top: 70px;
+    font-size: 18px;
+}
+.end_station{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    /*background-color: red;*/
+    margin-left: 250px;
+    margin-top: 170px;
+    font-size: 18px;
+}
+.c_seat{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    /*background-color: red;*/
+    margin-left: 200px;
+    margin-top: 220px;
+    font-size: 18px;
+}
+.b_seat{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    /*background-color: red;*/
+    margin-left: 280px;
+    margin-top: 220px;
+    font-size: 18px;
+}
+.a_seat{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    /*background-color: red;*/
+    margin-left: 360px;
+    margin-top: 220px;
+    font-size: 18px;
+}
+.seat_type{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    /*background-color: red;*/
+    margin-left: 350px;
+    margin-top: 70px;
+    font-size: 18px;
+}
+.seat_type input{
+    width: 130px;
+}
+.go_day{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    /*background-color: red;*/
+    margin-left: 350px;
+    margin-top: 140px;
+    font-size: 18px;
+}
+
+.user{
+    position: absolute;
+    width: 600px;
+    height: 200px;
+    background-color: #e7e7e7;
+    margin-left: 200px;
+    margin-top: 50px;
+    transition-duration: 0.4s;
+}
+.user .title{
+    margin-left: 200px;
+}
+.user:hover{
+    margin-top: 45px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+.user input{
+    width: 220px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+
+}
+.name{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    /*background-color: red;*/
+    margin-left: 60px;
+    margin-top: 50px;
+    font-size: 18px;
+}
+.carid{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    /*background-color: red;*/
+    margin-left: 320px;
+    margin-top: 50px;
+    font-size: 18px;
+}
+.button{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background-color: cadetblue;
+    margin-left: 190px;
+    margin-top: 130px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+#tip{
+    position: absolute;
+    width: 220px;
+    height: 30px;
+    line-height: 30px;
+    background-color: salmon;
+    margin-left: 190px;
+    margin-top: 170px;
+    font-size: 18px;
+    text-align: center;
+}
+#stip{
+    position: absolute;
+    width: 220px;
+    height: 30px;
+    line-height: 30px;
+    background-color: mediumseagreen;
+    margin-left: 190px;
+    margin-top: 170px;
+    font-size: 18px;
+    text-align: center;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{#    这句话让iframe忠的链接都在新页面打开 #}
+    <base target="_blank">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/foot.css">
+</head>
+<body>
+<div>
+    <div class="admin"><a href="{% url 'App:admin_login' %}">后台管理页面</a></div>
+    <div>快捷链接:
+        <a href="https://www.amap.com/">高德地图</a>
+        <a href="https://www.ctrip.com/">携程旅行</a>
+        <a href="http://www.weather.com.cn/">中国天气网</a>
+        <a href="https://www.ncovchina.com/">中国疫情网</a>
+        <a href="http://www.gov.cn/fuwu/2020-12/23/content_5572468.htm">核酸检测结果</a>
+        <a href="mailto:1298155318@qq.com">联系我</a>
+        <a href="https://www.zjff.edu.cn/">浙江纺织服装职业技术学院</a>
+    </div>
+</div>
+</body>
+</html>

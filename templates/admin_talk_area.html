@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<div>
+{% for c in chat %}
+
+    <div style="margin-top: 10px">
+        <div style="color: cornflowerblue">{{ c.time }}</div>
+        <span id="sendfrom">{{ c.sendfrom }}</span> : <div id="text" style="width: fit-content;
+                                       margin-top: -20px;
+                                       padding: 8px;
+                                       border-radius: 15px;
+                                       background-color: skyblue;
+                                       margin-left: 120px">{{ c.text }}</div>
+    </div>
+{% endfor %}
+
+</div>
+<script>
+{#    让网页加载后从底部显示#}
+    window.onload = function () {
+      window.scrollTo(0, document.body.scrollHeight)
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+.box{
+    width: 1260px;
+    height: 780px;
+    background-color: #e7e7e7;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+.top{
+    width: 200px;
+    height: 30px;
+    /*background-color: red;*/
+    margin: 0 auto;
+    margin-top: -10px;
+    text-align: center;
+    font-size: 20px;
+}
+table{
+    border-collapse:collapse;
+    margin: 0 auto;
+}
+table,th, td {
+  border: 0.1px solid black;
+}
+table tr:nth-child(odd){
+    background: turquoise;
+}
+table tr:nth-child(even){
+    background: lightblue;
+}
+.page_box{
+    width: 800px;
+    height: 50px;
+    /*background-color: red;*/
+    position: absolute;
+    margin-left: 200px;
+    bottom: 60px;
+    text-align: center;
+
+}
+.page{
+    display: inline-flex;
+    /*background-color: #555555;*/
+    /*color:white;*/
+}
+/*去除a标签的默认样式*/
+/*去除a标签下划线*/
+a {
+	text-decoration: none;
+    color: coral;
+    margin-left: 30px;
+    font-size: 30px;
+}
+/*去除未被访问的a标签的下划线*/
+a:link {
+	text-decoration: none;
+}
+/*去除已经被访问过的a标签的下划线*/
+a:visited {
+	text-decoration: none;
+}
+/*去除鼠标悬停时的a标签的下划线*/
+a:hover {
+	text-decoration: none;
+}
+/*去除正在点击的a标签的下划线（鼠标按下，尚未松开）*/
+a:active {
+	text-decoration: none;
+}
+/*去除获得焦点的a标签的下划线（被鼠标点击过）*/
+a:focus {
+	text-decoration: none;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/add_money.css">
+</head>
+<body>
+<div class="box">
+    <div class="user">{{ user.username }}</div>
+    <div class="money">余额 : {{ user.money }}￥</div>
+    <form action="" method="post">
+        {% csrf_token %} {# 防跨站攻击 #}
+        <label>
+            <input class="add_money" type="number" name="money">
+        </label>
+        <input class="button" type="submit" value="充值">
+    </form>
+
+    {% if status %}
+        <div id="tip" class="tip">{{ tip }}</div>
+    {% endif %}
+
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+{#    提示框淡入淡出#}
+    $('#tip').fadeOut(2000);
+</script>
+</body>
+</html>

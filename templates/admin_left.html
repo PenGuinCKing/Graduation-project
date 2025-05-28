@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/static/css/public_left.css">
+<div class="left">
+    <div class="logo">
+        <img class="logo_img" src="/static/img/logo.jpg" alt="">
+    </div>
+    <div class="menu">
+
+        <div class="menus"><a href="{% url 'App:admin_main_show_train' page=1 %}" target="admin_main">列车时刻表</a></div>
+        <div class="menus"><a href="{% url 'App:admin_add_ticket' %}" target="admin_main">添加车次</a></div>
+        <div class="menus"><a href="{% url 'App:admin_name_select' %}" target="admin_main">按车次查询</a></div>
+        <div class="menus"><a href="{% url 'App:ticket_del_log' page=1 %}" target="admin_main">已删除车次</a></div>
+{#        <div class="menus"><a href="{% url 'App:main_city_select' %}" target="admin_main">按城市查询</a></div>#}
+{#        <div class="menus"><a href="{% url 'App:main_station_select' %}" target="admin_main">按车站查询</a></div>#}
+{#        <div class="menus"><a href="{% url 'App:main_order_select' page=1 %}" target="main">查询订单</a></div>#}
+{#        <div class="menus"><a href="{% url 'App:main_user_home' %}" target="main">个人中心</a></div>#}
+{#        <div class="menus"><a href="{% url 'App:main_login_register' %}" target="main">登录 | 注册</a></div>#}
+        <div class="menus"><a href="{% url 'App:user_manage' %}" target="admin_main">用户管理</a></div>
+        <div class="menus"><a href="{% url 'App:station_manage' %}" target="admin_main">车站管理</a></div>
+        <div class="menus"><a href="{% url 'App:admin_call_user' user='duanyinan9' %}" target="admin_main">联系用户</a></div>
+
+    </div>
+</div>

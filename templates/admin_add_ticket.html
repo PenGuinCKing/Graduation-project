@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/add_ticket.css">
+</head>
+<body>
+<div class="box">
+    <form action="" method="post">
+        {% csrf_token %} {# 防跨站攻击 #}
+        <div>
+            <div>
+                <label>
+                    <span>车次</span><input name="t_name" value="{{ t_name }}" type="text">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>始发站</span><input name="start_station" value="{{ start_station }}" type="text">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>终点站</span><input name="end_station" value="{{ end_station }}" type="text">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>发车时间</span><input name="start_time" value="{{ start_time }}" type="time">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>到站时间</span><input name="end_time" value="{{ end_time }}" type="time">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>总时长</span><input name="time" value="{{ time }}" type="time">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>二等座</span><input name="c_seat" value="{{ c_seat }}" type="number" placeholder="(张)">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>价格</span><input onkeyup="value=value.replace([0-9.])"  name="c_price"   value="{{ c_price }}" type="text" placeholder="0.00￥">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>一等座</span><input name="b_seat" value="{{ b_seat }}" type="number" placeholder="(张)">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>价格</span><input onkeyup="value=value.replace([0-9.])" name="b_price" value="{{ b_price }}" type="text" placeholder="0.00￥">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>商务座</span><input name="a_seat" value="{{ a_seat }}" type="number" placeholder="(张)">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>价格</span><input onkeyup="value=value.replace([0-9.])" name="a_price" value="{{ a_price }}" type="text" placeholder="0.00￥">
+                </label>
+            </div>
+            <input class="button" type="submit" value="添加">
+            {% if status %}
+                <div class="tip" id="tip">{{ tip }}</div>
+            {% endif %}
+        </div>
+    </form>
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+{#    提示框淡入淡出#}
+    $('#tip').fadeOut(4000);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+.user{
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+}
+.money{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+.add_money{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 210px;
+    /*margin: 0 auto;*/
+    text-align: center;
+}
+.button{
+    width: 175px;
+    height: 30px;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 150px;
+}
+.tip{
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 160px;
+    background-color: salmon;
+    line-height: 50px;
+    font-size: 25px;
+    text-align: center;
+
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/main_show_train.css">
+</head>
+<body>
+<div class="background">
+    <div class="show_area" >
+        <div class="head">
+            <table class="head_table">
+                <tr>
+                    <td style="width:40px;">车次</td>
+                    <td style="width:50px;">始发站</td>
+                    <td style="width:50px;">终点站</td>
+                    <td style="width:60px;">时间区间</td>
+                    <td style="width:60px;">总用时</td>
+                    <td style="width:40px;">二等座</td>
+                    <td style="width:50px;">价格</td>
+                    <td style="width:50px;">一等座</td>
+                    <td style="width:40px;">价格</td>
+                    <td style="width:40px;">商务座</td>
+                    <td style="width:30px;">价格</td>
+                    <td style="width:30px;">操作</td>
+                </tr>
+            </table>
+        </div>
+        {% for ticket in pager.object_list %}
+            <div class="tick">
+                <table class="tick_table" >
+                    <tr>
+
+                        <td style="width:60px;">{{ ticket.t_name }}</td>
+                        <td style="width:80px;">{{ ticket.start_station }}</td>
+                        <td style="width:80px;">{{ ticket.end_station }}</td>
+                        <td>{{ ticket.start_time }}</td><td>到</td>
+                        <td>{{ ticket.end_time }}</td>
+                        <td style="width:100px;">时长{{ ticket.time }}</td>
+                        <td style="width:80px;">{{ ticket.c_seat }}张</td>
+                        <td style="width:80px;">{{ ticket.c_price }}￥</td>
+                        <td style="width:80px;">{{ ticket.b_seat }}张</td>
+                        <td style="width:80px;">{{ ticket.b_price }}￥</td>
+                        <td style="width:40px;">{{ ticket.a_seat }}张</td>
+                        <td style="width:80px;">{{ ticket.a_price }}￥</td>
+                        <td><a href="{% url 'App:buy_ticket' id=ticket.id %}">购买</a></td>
+                    </tr>
+                </table>
+            </div>
+        {% endfor %}
+    <div class="page_box">
+        <div class="page">
+            {% for page in paginator.page_range %}
+                <div  class="a">
+                    <a class="a1"  href="{% url 'App:show_train1' page=page start=start end=end %}">{{ page }}</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>

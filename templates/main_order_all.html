@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/main_order_all.css">
+</head>
+<body style="margin: 0;padding-top: 20px">
+<div class="box">
+    <div class="top">您的全部订单</div>
+    <table>
+        {% for order in pager.object_list %}
+            <tr>
+                <td style="width: 160px">{{ order.oid }}</td>
+                <td style="width: 60px">{{ order.t_name }}</td>
+                <td style="width: 80px">{{ order.start_station }}</td>
+                <td style="width: 80px">{{ order.end_station }}</td>
+                <td style="width: 40px">{{ order.start_time }}</td>
+                <td style="width: 40px">{{ order.end_time }}</td>
+                <td>{{ order.go_day }}</td>
+                <td>{{ order.seat_id }}</td>
+                <td>{{ order.seat_type }}</td>
+                <td>{{ order.price }}</td>
+                <td style="width: 120px">{{ order.username }}</td>
+                <td>{{ order.u_carid }}</td>
+                <td>{{ order.buy_time }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <div class="page_box">
+        <div class="page">
+            {% for page in paginator.page_range %}
+                <div  class="a">
+                    <a class="a1"  href="{% url 'App:main_order_all' page=page %}">{{ page }}</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 400px;
+            background-color: #555555;
+            margin: 0 auto;
+            margin-top: 60px;
+            padding-top: 50px;
+        }
+        .sel{
+            width: 800px;
+            height: 300px;
+            {#background-color: #bcbcbc;#}
+            margin: 0 auto;
+        }
+        .input{
+            width: 600px;
+            height: 80px;
+            border-radius: 80px;
+            outline: none;
+            font-size: 50px;
+            color: darkcyan;
+            margin-top: 30px;
+            margin-left: 30px;
+            text-align: center;
+        }
+        .button{
+            position: absolute;
+            width: 300px;
+            height: 50px;
+            margin-top: 200px;
+            margin-left: -450px;
+            background-color: deepskyblue;
+            border-color: #e7e7e7;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+            transition-duration: 0.4s;
+        }
+        .button:hover{
+            cursor: pointer;
+            box-shadow: none;
+        }
+        .text{
+            width: 350px;
+            height: 60px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 50px;
+            margin-left: 250px;
+            margin-top: -135px;
+            font-size: 30px;
+        }
+        .head{
+            {#position: absolute;#}
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            {#background-color: red;#}
+            color: #e7e7e7;
+            {#margin-top: -100px;#}
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="sel">
+        <form action="" method="post">
+            {% csrf_token %} {# 防跨站攻击 #}
+            <label>
+                <span class="head">始发站</span><input class="input" name="start" type="text"><br>
+                <span class="head">终点站</span><input class="input" name="end" type="text">
+            </label>
+            <input class="button" type="submit" value="查询">
+        </form>
+        {% if status %}
+            <div id="tip" class="text">{{ tip }}</div>
+        {% endif %}
+    </div>
+
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+{#    提示框淡入淡出#}
+    $('#tip').fadeOut(2000);
+</script>
+</body>
+</html>

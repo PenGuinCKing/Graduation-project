@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/main_login_register.css">
+</head>
+<body>
+<div class="box">
+    {#    登录页面#}
+    <div class="log-reg">
+        <div class="top">还没有账号？注册>></div>
+        <form action="" method="post">
+        {% csrf_token %} {# 防跨站攻击 #}
+            <div class="form">
+                <div class="username">
+                    <div class="text">用户名</div>
+                    <label><input name="username" type="text"></label>
+                </div>
+
+                <div class="password">
+                    <div class="text">密码</div>
+                    <label><input name="password" type="password"></label>
+                </div>              {# 刷新header页面 #}
+                <input onclick="window.parent.frames['header'].location='/header'" name="login" class="button" type="submit" value=">  登录  <">
+{#                    输入有误时的提示#}
+                {% if status %}
+                    <div id="ltip" style="position:absolute;
+                                 width: 250px;
+                                 height: 30px;
+                                 line-height: 30px;
+                                 text-align: center;
+                                 font-size: 15px;
+                                 margin-left: 135px;
+                                 background-color: salmon;
+                                 margin-top: 500px;
+                                 transition-duration: 0.4s;">
+                        {{ tip }}
+                    </div>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+
+
+    {#    注册页面#}
+    <div class="log-reg">
+        <div class="top">欢迎！</div>
+        <form action="" method="post" id="reg_from">
+
+            {% csrf_token %} {# 防跨站攻击 #}
+
+            <div class="form">
+                {#输入用户名#}
+                <div class="username1">
+                    <div class="text1">用户名</div>
+                    <label><input id="rusername" value="{{ rusername }}" name="rusername" class="input1" type="text" placeholder="6~16位由字母数字组成"></label>
+
+                </div>
+
+{#                输入密码#}
+                <div class="password1">
+                    <div class="text1">密码</div>
+                    <label><input id="rpassword" value="{{ rpassword }}" name="rpassword" class="input1" type="password" placeholder="6~16位由字母数字组成"></label>
+
+                </div>
+
+{#            重复密码#}
+                <div class="repassword">
+                    <div class="text1">确认密码</div>
+                    <label><input id="repassword" name="repassword" class="input1" type="password" placeholder="确保两次输入的密码一致"></label>
+
+                </div>
+
+{#            输入邮箱#}
+                <div class="email">
+                    <div class="text1">注册邮箱</div>
+                    <label><input id="email" value="{{ email }}" name="email" class="input1" type="email" placeholder="example@qq.com"></label>
+
+                </div>
+                <input name="register" id="reg" onclick="save()" class="button" type="submit" value=">  注册  <">
+{#                    输入有误时的提示#}
+                {% if rstatus %}
+                    <div id="rtip" style="position:absolute;
+                                 width: 250px;
+                                 height: 30px;
+                                 line-height: 30px;
+                                 text-align: center;
+                                 font-size: 15px;
+                                 margin-left: 135px;
+                                 background-color: salmon;
+                                 margin-top: 500px;
+                                 transition-duration: 0.4s;">
+                        {{ rtip }}
+                    </div>
+                {% endif %}
+{#            注册成功的提示#}
+                {% if rsuccess %}
+                    <div id="rtip" style="position:absolute;
+                                 width: 250px;
+                                 height: 30px;
+                                 line-height: 30px;
+                                 text-align: center;
+                                 font-size: 15px;
+                                 margin-left: 135px;
+                                 background-color: mediumturquoise;
+                                 margin-top: 500px;
+                                 transition-duration: 0.4s;">
+                        {{ rtip }}
+                    </div>
+                {% endif %}
+
+            </div>
+        </form>
+    </div>
+
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+{#    提示框淡入淡出#}
+    $('#rtip').fadeOut(4000);
+    $('#ltip').fadeOut(4000)
+
+</script>
+
+</body>
+</html>

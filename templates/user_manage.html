@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/user_manage.css">
+</head>
+<body>
+<div class="box">
+    <div class="user_head">用户列表</div>
+    <div>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label>
+                <input class="input" name="username" type="text" value="">
+            </label>
+            <input class="button" type="submit" value="搜索">
+        </form>
+    </div>
+    <div class="window">
+        {% for user in users %}
+            <div class="user">
+                <a href="">{{ user.username }}</a>
+                <a style="margin-left: 20px" href="">{{ user.reg_time }}</a>
+                <a style="margin-left: 20px" href="">{{ user.money }}￥</a>
+                <a style="float: right;margin-right: 50px;font-size: 30px" href="{% url 'App:del_user' id=user.id %}">❌</a>
+            </div>
+        {% endfor %}
+
+    </div>
+
+    <div></div>
+</div>
+</body>
+</html>

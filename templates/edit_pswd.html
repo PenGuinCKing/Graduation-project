@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/edit_pswd.css">
+</head>
+<body>
+<div class="box">
+    <form action="" method="post">
+        {% csrf_token %} {# 防跨站攻击 #}
+        <div class="user">{{ user.username }}</div>
+        <div class="title">原密码</div>
+        <div>
+            <label>
+                <input name="password" class="pswd" type="password" value="" placeholder="请输入原密码">
+            </label>
+        </div>
+        <div class="title">新密码</div>
+        <div>
+            <label>
+                <input name="new_password" class="pswd" type="password" value="" placeholder="请输入新密码">
+            </label>
+        </div>
+        <input class="button" type="submit" value="保存">
+    </form>
+    {% if status %}
+        <div style="position: absolute;
+                    margin-top: 30px;
+                    margin-left: 190px;
+                    width: 200px;height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    background-color: salmon" id="tip">{{ tip }}</div>
+    {% endif %}
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+{#    提示框淡入淡出#}
+    $('#tip').fadeOut(4000);
+
+</script>
+</body>
+</html>

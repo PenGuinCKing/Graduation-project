@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/static/css/public_left.css">
+<div class="left">
+    <div class="logo">
+        <img class="logo_img" src="/static/img/logo.jpg" alt="">
+    </div>
+    <div class="menu">
+
+        <div class="menus"><a href="{% url 'App:show_train' page=1 %}" target="main">列车时刻表</a></div>
+        <div class="menus"><a href="{% url 'App:main_name_select' %}" target="main">按车次查询</a></div>
+        <div class="menus"><a href="{% url 'App:main_city_select' %}" target="main">按城市查询</a></div>
+        <div class="menus"><a href="{% url 'App:main_station_select' %}" target="main">按车站查询</a></div>
+        <div class="menus"><a href="{% url 'App:main_order_select' page=1 %}" target="main">我的订单</a></div>
+        <div class="menus"><a href="{% url 'App:main_user_home' %}" target="main">个人中心</a></div>
+        <div class="menus"><a href="{% url 'App:main_call_admin' %}" target="main">联系客服</a></div>
+        <div class="menus"><a href="{% url 'App:main_login_register' %}" target="main">登录 | 注册</a></div>
+
+    </div>
+</div>

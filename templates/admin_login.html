@@ -1,0 +1,46 @@
+{# 1、引入静态文件 #}
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/admin_login.css">
+</head>
+<body style="padding: 0;margin: 0">
+<video src="/static/img/train.mp4" autoplay="autoplay" loop="loop" width="100%" height="100%"></video>
+<div class="box">
+    <div class="title">管理员登录页面</div>
+    <div class="login">
+        <form action="" method="post">
+            {% csrf_token %}
+{#             防跨站攻击#}
+            <div class="head">用户名</div>
+            <label>
+                <input name="username" type="text" value="" placeholder="管理员用户名">
+            </label>
+            <div class="head">密码</div>
+            <label>
+                <input name="password" type="password" value="" placeholder="管理员密码"><br>
+            </label>
+            <input class="button" type="submit" value="登录">
+        </form>
+        {% if status %}
+            <div id="tip" class="tip">{{ tip }}</div>
+        {% endif %}
+    </div>
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+    {#提示框淡入淡出#}
+    $('#tip').fadeOut(2000);
+</script>
+<style>
+    body {
+    cursor: url(https://blog-static.cnblogs.com/files/zhangshuhao1116/1.ico), auto;
+    }
+
+</style>
+<script src="{% static '/live2d-widget/autoload.js' %}"></script>
+</body>
+</html>

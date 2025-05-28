@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{#自动刷新页面#}
+{#<meta http-equiv="refresh" content="0.5">#}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/css/public_header.css">
+</head>
+<body>
+<div class="box">
+    <div class="title">
+        <div><p>火车票查询系统</p></div>
+    </div>
+    <div class="user">
+        <p>用户：<a href="" id="username">{{ username }}</a></p>
+        <div style="display: none;cursor: pointer" id="exit"><a href="{% url 'App:main_logout' %}">退出</a></div>
+    </div>
+
+</div>
+<script>
+    $('.user').mouseover(function (){
+        document.getElementById('exit').style.display='block'
+    }).mouseout(function (){
+        document.getElementById('exit').style.display='none'
+    })
+
+</script>
+</body>
+</html>

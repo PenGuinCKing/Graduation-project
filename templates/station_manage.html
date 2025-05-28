@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/station_manage.css">
+</head>
+<body>
+<div class="box">
+    <div class="function">
+        <form action="" method="post">
+            {% csrf_token %}
+            <label>
+                <input class="sel_sta" name="sel_sta" type="text" value="">
+            </label>
+            <input class="sel" name="sel" type="submit" value="搜索">
+            <input class="button" name="add" type="submit" value="添加">
+            <input class="button" name="save" type="submit" value="保存">
+            <input class="button" name="del" type="submit" value="删除">
+            <label>
+                <input class="station" name="station" type="text" value="{{ sta.0.station }}" placeholder="车站名">
+            </label>
+            <label>
+                <input class="en_station" name="en_station" type="text" value="{{ sta.0.en_station }}" placeholder="英文名">
+            </label>
+            <label>
+                <input class="city" name="city" type="text" value="{{ sta.0.city }}" placeholder="城市">
+            </label>
+        </form>
+        {% if status %}
+            <div id="tip" class="tip">{{ tip }}</div>
+        {% endif %}
+    </div>
+    <div class="stations">
+        <div class="title">
+            <div style="position: absolute;margin-left: 75px">站点</div>
+            <div style="position: absolute;margin-left: 400px">英文</div>
+            <div style="position: absolute;margin-left: 700px">城市</div>
+        </div>
+        <div class="content">
+            {% for station in stations %}
+                <div style="margin-top: 10px;margin-left: 75px">{{ station.station }}</div>
+                <div style="margin-top: -20px;margin-left: 400px">{{ station.en_station }}</div>
+                <div style="margin-top: -20px;margin-left: 700px">{{ station.city }}</div>
+                <hr style="width: 90%" >
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+{#    提示框淡入淡出#}
+    $('#tip').fadeOut(3000);
+</script>
+</body>
+</html>

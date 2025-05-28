@@ -1,0 +1,52 @@
+.box{
+    width: 1000px;
+    height: 800px;
+    background-color: #e7e7e7;
+    margin:0 auto;
+    padding-top: 30px;
+}
+form{
+    margin-left: 100px;
+}
+span{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    /*background-color: red;*/
+    margin-left: 160px;
+    margin-top: 20px;
+}
+input{
+    margin-left: 100px;
+    /*margin-top: 20px;*/
+    margin-right: 400px;
+    float: right;
+    text-align: center;
+    outline: none;
+    height: 30px;
+    width: 150px;
+    font-size: 20px;
+}
+.box form div div{
+    margin-top: 20px;
+}
+.button{
+    width: 100px;
+    height: 30px;
+    background-color: lightblue;
+    outline: none;
+    position: absolute;
+    margin-left: 600px;
+    margin-top: -300px;
+}
+.tip{
+    position:absolute;
+    width: 300px;
+    height: 50px;
+    background-color: salmon;
+    top: 350px;
+    margin-left: 510px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+}
